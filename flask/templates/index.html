@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Artículos</title>
+
+    <!-- Agrega el enlace al archivo de estilos de Tailwind CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded shadow">
+
+        <h1 class="text-2xl font-bold mb-4">Lista de Artículos</h1>
+        <ul class="list-disc pl-4">
+            {% for article in articles %}
+                <li class="mb-2">
+                    <strong class="text-blue-500">{{ article.get('Título_de_articulo', 'Título No Disponible') }}</strong>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('create_article') }}" class="block text-center mt-4 text-blue-500">Crear Nuevo Artículo</a>
+
+    </div>
+</body>
+
+</html>

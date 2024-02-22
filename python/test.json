@@ -1,0 +1,59 @@
+{
+  "Título_de_articulo": "prueba_articulo_420",
+  "autor_principal": {
+    "nombre": "cesar zavala lopez",
+    "datos": "departamento de tecnologias, upv, calle alamo",
+    "orcid": "0000-0003-1044-2710"
+  },
+  "coautores": [
+    {
+      "nombre": "jesus perez cepeda",
+      "datos": "departamento de ciencia, upv, calle alamo",
+      "orcid": "0003-0000-1044-2710"
+    },
+    {
+      "nombre": "jose lopez garcia",
+      "datos": "departamento de ciencia, uvm, calle sexta",
+      "orcid": "0003-1044-4209-2710"
+    }
+  ],
+  "resumen": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, mi et posuere viverra, libero dolor tristique nibh, id egestas elit lectus at turpis. Nullam lobortis tempor mauris quis volutpat. Fusce vulputate nunc eget nisl tempor, sed feugiat ante suscipit. Praesent pharetra interdum volutpat. Donec id ipsum nec nibh aliquet scelerisque. Sed mi sem, gravida eu efficitur dapibus, auctor nec urna. Morbi vel ipsum varius, posuere quam eu, varius risus. Mauris fermentum hendrerit tellus id suscipit. Nullam et libero a ipsum viverra congue non eget turpis.",
+  "palabras_clave": [
+    "aqui",
+    "debe",
+    "ir",
+    "el",
+    "resumen",
+    "palabras",
+    "clave"
+  ],
+  "introduccion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, mi et posuere viverra, libero dolor tristique nibh, id egestas elit lectus at turpis. Nullam lobortis tempor mauris quis volutpat. Fusce vulputate nunc eget nisl tempor, sed feugiat ante suscipit. Praesent pharetra interdum volutpat. Donec id ipsum nec nibh aliquet scelerisque. Sed mi sem, gravida eu efficitur dapibus, auctor nec urna. Morbi vel ipsum varius, posuere quam eu, varius risus. Mauris fermentum hendrerit tellus id suscipit. Nullam et libero a ipsum viverra congue non eget turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, mi et posuere viverra, libero dolor tristique nibh, id egestas elit lectus at turpis. Nullam lobortis tempor mauris quis volutpat. Fusce vulputate nunc eget nisl tempor, sed feugiat ante suscipit. Praesent pharetra interdum volutpat. Donec id ipsum nec nibh aliquet scelerisque. Sed mi sem, gravida eu efficitur dapibus, auctor nec urna. Morbi vel ipsum varius, posuere quam eu, varius risus. Mauris fermentum hendrerit tellus id suscipit. Nullam et libero a ipsum viverra congue non eget turpis.",
+  "secciones": [
+    {
+      "titulo": "seccion titulo",
+      "contenido": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, mi et posuere viverra, libero dolor tristique nibh, id egestas elit lectus at turpis. Nullam lobortis tempor mauris quis volutpat. Fusce vulputate nunc eget nisl tempor, sed feugiat ante suscipit. Praesent pharetra interdum volutpat. Donec id ipsum nec nibh aliquet scelerisque. Sed mi sem, gravida eu efficitur dapibus, auctor nec urna. Morbi vel ipsum varius, posuere quam eu, varius risus. Mauris fermentum hendrerit tellus id suscipit. Nullam et libero a ipsum viverra congue non eget turpis.",
+      "subsecciones": [
+        {
+          "subtitulo": "subseccion 1 de 1",
+          "contenido": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, mi et posuere viverra, libero dolor tristique nibh, id egestas elit lectus at turpis. Nullam lobortis tempor mauris quis volutpat. Fusce vulputate nunc eget nisl tempor, sed feugiat ante suscipit. Praesent pharetra interdum volutpat. Donec id ipsum nec nibh aliquet scelerisque. Sed mi sem, gravida eu efficitur dapibus, auctor nec urna. Morbi vel ipsum varius, posuere quam eu, varius risus. Mauris fermentum hendrerit tellus id suscipit. Nullam et libero a ipsum viverra congue non eget turpis."
+        }
+      ]
+    },
+    {
+      "titulo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, mi et posuere viverra, libero dolor tristique nibh, id egestas elit lectus at turpis. Nullam lobortis tempor mauris quis volutpat. Fusce vulputate nunc eget nisl tempor, sed feugiat ante suscipit. Praesent pharetra interdum volutpat. Donec id ipsum nec nibh aliquet scelerisque. Sed mi sem, gravida eu efficitur dapibus, auctor nec urna. Morbi vel ipsum varius, posuere quam eu, varius risus. Mauris fermentum hendrerit tellus id suscipit. Nullam et libero a ipsum viverra congue non eget turpis.",
+      "contenido": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, mi et posuere viverra, libero dolor tristique nibh, id egestas elit lectus at turpis. Nullam lobortis tempor mauris quis volutpat. Fusce vulputate nunc eget nisl tempor, sed feugiat ante suscipit. Praesent pharetra interdum volutpat. Donec id ipsum nec nibh aliquet scelerisque. Sed mi sem, gravida eu efficitur dapibus, auctor nec urna. Morbi vel ipsum varius, posuere quam eu, varius risus. Mauris fermentum hendrerit tellus id suscipit. Nullam et libero a ipsum viverra congue non eget turpis.",
+      "subsecciones": []
+    },
+    {
+      "titulo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, mi et posuere viverra, libero dolor tristique nibh, id egestas elit lectus at turpis. Nullam lobortis tempor mauris quis volutpat. Fusce vulputate nunc eget nisl tempor, sed feugiat ante suscipit. Praesent pharetra interdum volutpat. Donec id ipsum nec nibh aliquet scelerisque. Sed mi sem, gravida eu efficitur dapibus, auctor nec urna. Morbi vel ipsum varius, posuere quam eu, varius risus. Mauris fermentum hendrerit tellus id suscipit. Nullam et libero a ipsum viverra congue non eget turpis.",
+      "contenido": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, mi et posuere viverra, libero dolor tristique nibh, id egestas elit lectus at turpis. Nullam lobortis tempor mauris quis volutpat. Fusce vulputate nunc eget nisl tempor, sed feugiat ante suscipit. Praesent pharetra interdum volutpat. Donec id ipsum nec nibh aliquet scelerisque. Sed mi sem, gravida eu efficitur dapibus, auctor nec urna. Morbi vel ipsum varius, posuere quam eu, varius risus. Mauris fermentum hendrerit tellus id suscipit. Nullam et libero a ipsum viverra congue non eget turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, mi et posuere viverra, libero dolor tristique nibh, id egestas elit lectus at turpis. Nullam lobortis tempor mauris quis volutpat. Fusce vulputate nunc eget nisl tempor, sed feugiat ante suscipit. Praesent pharetra interdum volutpat. Donec id ipsum nec nibh aliquet scelerisque. Sed mi sem, gravida eu efficitur dapibus, auctor nec urna. Morbi vel ipsum varius, posuere quam eu, varius risus. Mauris fermentum hendrerit tellus id suscipit. Nullam et libero a ipsum viverra congue non eget turpis.",
+      "subsecciones": [
+        {
+          "subtitulo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, mi et posuere viverra, libero dolor tristique nibh, id egestas elit lectus at turpis. Nullam lobortis tempor mauris quis volutpat. Fusce vulputate nunc eget nisl tempor, sed feugiat ante suscipit. Praesent pharetra interdum volutpat. Donec id ipsum nec nibh aliquet scelerisque. Sed mi sem, gravida eu efficitur dapibus, auctor nec urna. Morbi vel ipsum varius, posuere quam eu, varius risus. Mauris fermentum hendrerit tellus id suscipit. Nullam et libero a ipsum viverra congue non eget turpis.",
+          "contenido": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, mi et posuere viverra, libero dolor tristique nibh, id egestas elit lectus at turpis. Nullam lobortis tempor mauris quis volutpat. Fusce vulputate nunc eget nisl tempor, sed feugiat ante suscipit. Praesent pharetra interdum volutpat. Donec id ipsum nec nibh aliquet scelerisque. Sed mi sem, gravida eu efficitur dapibus, auctor nec urna. Morbi vel ipsum varius, posuere quam eu, varius risus. Mauris fermentum hendrerit tellus id suscipit. Nullam et libero a ipsum viverra congue non eget turpis."
+        }
+      ]
+    }
+  ],
+  "conclusion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, mi et posuere viverra, libero dolor tristique nibh, id egestas elit lectus at turpis. Nullam lobortis tempor mauris quis volutpat. Fusce vulputate nunc eget nisl tempor, sed feugiat ante suscipit. Praesent pharetra interdum volutpat. Donec id ipsum nec nibh aliquet scelerisque. Sed mi sem, gravida eu efficitur dapibus, auctor nec urna. Morbi vel ipsum varius, posuere quam eu, varius risus. Mauris fermentum hendrerit tellus id suscipit. Nullam et libero a ipsum viverra congue non eget turpis.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus, mi et posuere viverra, libero dolor tristique nibh, id egestas elit lectus at turpis. Nullam lobortis tempor mauris quis volutpat. Fusce vulputate nunc eget nisl tempor, sed feugiat ante suscipit. Praesent pharetra interdum volutpat. Donec id ipsum nec nibh aliquet scelerisque. Sed mi sem, gravida eu efficitur dapibus, auctor nec urna. Morbi vel ipsum varius, posuere quam eu, varius risus. Mauris fermentum hendrerit tellus id suscipit. Nullam et libero a ipsum viverra congue non eget turpis."
+}

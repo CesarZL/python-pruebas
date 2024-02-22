@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Artículo</title>
+
+    <!-- Agrega el enlace al archivo de estilos de Tailwind CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded shadow">
+
+        <h1 class="text-2xl font-bold mb-4">Crear Artículo</h1>
+        <form method="post" action="{{ url_for('create_article') }}" id="articleForm">
+            <label for="article_title" class="block mb-2">Título del Artículo:</label>
+            <input type="text" class="w-full border border-gray-300 p-2 rounded mb-4" id="article_title" name="article_title" required>
+
+            <label for="main_author_name" class="block mb-2">Nombre del Autor Principal:</label>
+            <input type="text" class="w-full border border-gray-300 p-2 rounded mb-4" id="main_author_name" name="main_author_name" required><br>
+            <label for="main_author_affiliation" class="block mb-2">Afiliación del Autor Principal:</label>
+            <input type="text" class="w-full border border-gray-300 p-2 rounded mb-4" id="main_author_affiliation" name="main_author_affiliation" required><br>
+            <label for="main_author_orcid" class="block mb-2">ORCID del Autor Principal:</label>
+            <input type="text" class="w-full border border-gray-300 p-2 rounded mb-4" id="main_author_orcid" name="main_author_orcid"><br>
+
+            <div id="coauthorsContainer">
+                <label>Coautor 1:</label>
+                <input type="text" class="w-full border border-gray-300 p-2 rounded mb-4" name="coauthor_name[]" placeholder="Nombre">
+                <input type="text" class="w-full border border-gray-300 p-2 rounded mb-4" name="coauthor_affiliation[]" placeholder="Afiliación">
+                <input type="text" class="w-full border border-gray-300 p-2 rounded mb-4" name="coauthor_orcid[]" placeholder="ORCID">
+                <br>
+            </div>
+
+            <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded"
+                onclick="addCoauthor()">Agregar Coautor</button>
+            <br>
+
+            <label for="abstract" class="block my-2">Resumen/Abstract:</label>
+            <textarea id="abstract" class="w-full border border-gray-300 p-2 rounded mb-4" name="abstract" required></textarea><br>
+
+            <label for="keywords" class="block mb-2">Palabras Clave (separadas por comas):</label>
+            <input type="text" id="keywords" class="w-full border border-gray-300 p-2 rounded mb-4" name="keywords" required><br>
+
+            <label for="introduction" class="block mb-2">Introducción/Introduction:</label>
+            <textarea id="introduction" class="w-full border border-gray-300 p-2 rounded mb-4" name="introduction" required></textarea><br>
+
+            <div id="sectionsContainer">
+                <label class="block mb-2">Sección 1:</label>
+                <input type="text" name="section_title[]" class="w-full border border-gray-300 p-2 rounded mb-4" placeholder="Título de la Sección" required>
+                <textarea name="section_content[]" class="w-full border border-gray-300 p-2 rounded mb-4" placeholder="Contenido de la Sección" required></textarea>
+
+                <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded mb-2" onclick="addSubsection(this)">Agregar Subsección</button>
+
+                <div class="subsectionContainer">
+                    <label class="block mb-2"Subsección 1.1:</label>
+                    <input type="text" name="subsection_title[0][]" class="w-full border border-gray-300 p-2 rounded mb-4" placeholder="Título de la Subsección">
+                    <textarea name="subsection_content[0][]" class="w-full border border-gray-300 p-2 rounded mb-4" placeholder="Contenido de la Subsección"></textarea>
+                </div>
+                <br>
+            </div>
+
+            <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded" onclick="addSection()">Agregar Sección</button>
+            <br>
+
+            <label for="conclusion" class="block mb-2">Conclusión/Conclusion:</label>
+            <textarea id="conclusion" class="w-full border border-gray-300 p-2 rounded mb-4" name="conclusion" required></textarea><br>
+
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Crear Artículo</button>
+        </form>
+        <a href="{{ url_for('index') }} " class="block text-center mt-4 text-blue-500">Volver a la Lista de Artículos</a>
+        <script>
+            let coauthorCount = 1;
+            let sectionCount = 1;
+
+            function addCoauthor() {
+                coauthorCount++;
+
+                const container = document.getElementById('coauthorsContainer');
+
+                const label = document.createElement('label');
+                label.textContent = `Coautor ${coauthorCount}:`;
+
+                const nameInput = document.createElement('input');
+                nameInput.type = 'text';
+                nameInput.name = `coauthor_name[]`;
+                nameInput.placeholder = 'Nombre';
+                nameInput.classList.add('w-full', 'border', 'border-gray-300', 'p-2', 'rounded', 'mb-4');
+
+                const affiliationInput = document.createElement('input');
+                affiliationInput.type = 'text';
+                affiliationInput.name = `coauthor_affiliation[]`;
+                affiliationInput.placeholder = 'Afiliación';
+                affiliationInput.classList.add('w-full', 'border', 'border-gray-300', 'p-2', 'rounded', 'mb-4');
+
+                const orcidInput = document.createElement('input');
+                orcidInput.type = 'text';
+                orcidInput.name = `coauthor_orcid[]`;
+                orcidInput.placeholder = 'ORCID';
+                orcidInput.classList.add('w-full', 'border', 'border-gray-300', 'p-2', 'rounded', 'mb-4');
+
+                const br = document.createElement('br');
+
+                container.appendChild(label);
+                container.appendChild(nameInput);
+                container.appendChild(affiliationInput);
+                container.appendChild(orcidInput);
+                container.appendChild(br);
+            }
+
+            function addSection() {
+                sectionCount++;
+
+                const container = document.getElementById('sectionsContainer');
+
+                const label = document.createElement('label');
+                label.textContent = `Sección ${sectionCount}:`;
+
+                const titleInput = document.createElement('input');
+                titleInput.type = 'text';
+                titleInput.name = `section_title[]`;
+                titleInput.placeholder = 'Título de la Sección';
+                titleInput.required = true;
+                titleInput.classList.add('w-full', 'border', 'border-gray-300', 'p-2', 'rounded', 'mb-4');
+
+                const contentTextarea = document.createElement('textarea');
+                contentTextarea.name = `section_content[]`;
+                contentTextarea.placeholder = 'Contenido de la Sección';
+                contentTextarea.required = true;
+                contentTextarea.classList.add('w-full', 'border', 'border-gray-300', 'p-2', 'rounded', 'mb-4');
+
+                const subsectionButton = document.createElement('button');
+                subsectionButton.type = 'button';
+                subsectionButton.textContent = 'Agregar Subsección';
+                subsectionButton.onclick = function () { addSubsection(this); };
+                subsectionButton.classList.add('bg-blue-500', 'text-white', 'px-4', 'py-2', 'rounded', 'mb-4');
+
+                const br = document.createElement('br');
+
+                const subsectionContainer = document.createElement('div');
+                subsectionContainer.className = 'subsectionContainer';
+
+                const subsectionLabel = document.createElement('label');
+                subsectionLabel.textContent = `Subsección ${sectionCount}.1:`;
+
+                const subsectionTitleInput = document.createElement('input');
+                subsectionTitleInput.type = 'text';
+                subsectionTitleInput.name = `subsection_title[${sectionCount - 1}][]`;
+                subsectionTitleInput.placeholder = 'Título de la Subsección';
+                subsectionTitleInput.classList.add('w-full', 'border', 'border-gray-300', 'p-2', 'rounded', 'mb-4');
+
+                const subsectionContentTextarea = document.createElement('textarea');
+                subsectionContentTextarea.name = `subsection_content[${sectionCount - 1}][]`;
+                subsectionContentTextarea.placeholder = 'Contenido de la Subsección';
+                subsectionContentTextarea.classList.add('w-full', 'border', 'border-gray-300', 'p-2', 'rounded', 'mb-4');
+
+                container.appendChild(label);
+                container.appendChild(titleInput);
+                container.appendChild(contentTextarea);
+                container.appendChild(subsectionButton);
+                container.appendChild(br);
+                container.appendChild(subsectionContainer);
+
+                subsectionContainer.appendChild(subsectionLabel);
+                subsectionContainer.appendChild(subsectionTitleInput);
+                subsectionContainer.appendChild(subsectionContentTextarea);
+            }
+
+            function addSubsection(button) {
+                const sectionContainer = button.parentElement;
+                const subsectionContainer = sectionContainer.querySelector('.subsectionContainer');
+
+                const subsectionCount = subsectionContainer.children.length / 3 + 1;
+
+                const label = document.createElement('label');
+                label.textContent = `Subsección ${subsectionCount}:`;
+
+                const titleInput = document.createElement('input');
+                titleInput.type = 'text';
+                titleInput.name = `subsection_title[${sectionCount - 1}][]`;
+                titleInput.placeholder = 'Título de la Subsección';
+                titleInput.classList.add('w-full', 'border', 'border-gray-300', 'p-2', 'rounded', 'mb-4');
+
+                const contentTextarea = document.createElement('textarea');
+                contentTextarea.name = `subsection_content[${sectionCount - 1}][]`;
+                contentTextarea.placeholder = 'Contenido de la Subsección';
+                contentTextarea.classList.add('w-full', 'border', 'border-gray-300', 'p-2', 'rounded', 'mb-4');
+
+                const br = document.createElement('br');
+
+                subsectionContainer.appendChild(label);
+                subsectionContainer.appendChild(titleInput);
+                subsectionContainer.appendChild(contentTextarea);
+                subsectionContainer.appendChild(br);
+            }
+        </script>
+</body>
+
+</html>
